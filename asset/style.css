@@ -1,0 +1,445 @@
+/* color1: #1A1A1D */
+/* color2: #3B1C32 */
+/* color3: #6A1E55 */
+/* color4: #A64D79 */
+
+body {
+  background-color: #a64d79;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='40' viewBox='0 0 50 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233b1c32' fill-opacity='0.4'%3E%3Cpath d='M40 10L36.67 0h-2.11l3.33 10H20l-2.28 6.84L12.11 0H10l6.67 20H10l-2.28 6.84L2.11 10 5.44 0h-2.1L0 10l6.67 20-3.34 10h2.11l2.28-6.84L10 40h20l2.28-6.84L34.56 40h2.1l-3.33-10H40l2.28-6.84L47.89 40H50l-6.67-20L50 0h-2.1l-5.62 16.84L40 10zm1.23 10l-2.28-6.84L34 28h4.56l2.67-8zm-10.67 8l-2-6h-9.12l2 6h9.12zm-12.84-4.84L12.77 38h15.79l2.67-8H20l-2.28-6.84zM18.77 20H30l2.28 6.84L37.23 12H21.44l-2.67 8zm-7.33 2H16l-4.95 14.84L8.77 30l2.67-8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 400px;
+  height: auto;
+  background-color: #3b1c32;
+  border: 1px solid white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h1 {
+  color: white;
+  text-align: center;
+}
+
+.card form label {
+  color: white;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0 30px;
+  gap: 10px;
+}
+
+.card form input {
+  height: 30px;
+  padding: 0 20px;
+  background-color: #1a1a1d;
+  border: 1px solid gray;
+  color: white;
+}
+
+.card form button {
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 35px;
+  transition: 0.4s;
+}
+
+.card form button:hover {
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.card form a{
+  margin: 20px 0;
+  padding: 5px;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card form a:hover{
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.card p {
+  font-size: large;
+  color: white;
+  margin: 40px;
+  text-align: center;
+}
+
+.card p a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.card p a:hover {
+  color: #a64d79;
+}
+
+#menu {
+  background: #1a1a1d;
+  height: 45px;
+  padding-left: 18px;
+  border-radius: 10px;
+}
+
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+#menu ul {
+  width: 100%;
+  text-align: left;
+}
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+#menu a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+#menu li a:hover:not(.active) {
+  color: #ffffff;
+  background: #6a1e55;
+  border-radius: 10px;
+}
+
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#menu label {
+  display: none;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+
+#menu label:before {
+  font-size: 1.6em;
+  color: #ffffff;
+  content: "\2261";
+  margin-left: 20px;
+}
+
+.user {
+  width: 100%;
+  height: 100%;
+  padding: 1.5px 3.25px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 40px 30px;
+}
+
+main a {
+  padding: 8px 10px;
+  background-color: #1a1a1d;
+  border: 1px solid white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: medium;
+  font-weight: bolder;
+  transition: 0.4s;
+}
+
+main a:hover {
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.main-table {
+  margin: 40px 30px;
+  padding-right: 40px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid white;
+  padding: 8px;
+}
+
+.table tr {
+  background-color: #a64d79;
+  color: white;
+  transition: 0.8s;
+}
+
+.table tr:nth-child(even) {
+  background-color: #6a1e55;
+  transition: 0.4ms;
+}
+
+.table tr:hover {
+  background-color: #3b1c32;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #1a1a1d;
+  color: white;
+}
+
+.main-card {
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-card .card {
+  margin: 20px 30px;
+  padding: 30px 20px;
+  width: 200px;
+  height: 250px;
+  background-color: #3b1c32;
+  border: 1px solid #ffffff;
+}
+
+.main-card .card img {
+  width: 100%;
+  height: 50%;
+}
+
+.main-card .card h2 {
+  text-align: center;
+  color: white;
+}
+
+.main-card .card .card-button {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.main-card .card .card-button a {
+  width: 60px;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+.content-wrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-card {
+  width: 600px;
+  height: auto;
+  background-color: #3b1c32;
+  border: 1px solid #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-card h1 {
+  color: white;
+  text-align: center;
+}
+
+.content-card img {
+  margin: 0 auto;
+  width: 50%;
+  height: 10%;
+}
+
+.content-card form label {
+  color: white;
+}
+
+.content-card form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0 30px;
+  gap: 10px;
+}
+
+.content-card form input {
+  height: 30px;
+  padding: 0 20px;
+  background-color: #1a1a1d;
+  border: 1px solid gray;
+  color: white;
+}
+
+.content-card form textarea {
+  height: 80px;
+  padding: 10px 20px;
+  background-color: #1a1a1d;
+  border: 1px solid gray;
+  color: white;
+}
+
+.content-card form button{
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 35px;
+  transition: 0.4s;
+}
+
+.content-card form button:hover{
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.content-card form .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.content-card form .button a {
+  padding-top: 5px;
+  width: 80px;
+  height: 30px;
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.content-card form .button a:hover {
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.content-card form a{
+  padding: 5px;
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.content-card form a:hover{
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.content-card a {
+  text-align: center;
+  margin: 20px;
+  text-decoration: none;
+  font-size: large;
+  color: white;
+  transition: 0.4s;
+}
+
+.content-card a:hover {
+  color: #a64d79;
+}
+
+.content-card .link{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content-card .link a{
+  padding-top: 5px;
+  width: 150px;
+  height: 30px;
+  font-size: medium;
+  font-weight: bold;
+  color: white;
+  background-color: #1a1a1d;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.content-card .link a:hover{
+  background-color: transparent;
+  border: 5px solid #1a1a1d;
+}
+
+.content-card .user{
+  margin: 10px auto 20px;
+}
+
+.content-card form ::placeholder{
+  color: white;
+}
