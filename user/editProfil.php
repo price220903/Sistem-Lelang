@@ -65,6 +65,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Lelang</title>
     <link rel="stylesheet" href="../asset/style.css">
+    <script>
+        var timeout = 300000; // waktu dalam milidetik (5 menit) 
+        var logoutTimer;
+
+        function resetTimer() {
+            clearTimeout(logoutTimer);
+            logoutTimer = setTimeout(logout, timeout);
+        }
+
+        function logout() {
+            window.location.href = '?logout=true'; // arahkan ke halaman logout 
+        }
+        document.onload = resetTimer;
+        document.onmousemove = resetTimer;
+        document.onkeypress = resetTimer;
+    </script>
 </head>
 
 <body>

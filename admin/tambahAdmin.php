@@ -10,6 +10,27 @@ if (!isset($_SESSION['id'])) {
 }
 
 $message = "";
+$timeout = 300; // waktu dalam detik (5 menit)
+
+// Logika timeout
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout) {
+    session_unset(); // Hapus semua variabel sesi 
+    session_destroy(); // Hancurkan sesi 
+    $message = "Sesi telah berakhir karena tidak ada aktivitas selama 5 menit.";
+    echo "<script type='text/javascript'>alert('$message'); window.location.href = '../login.php';</script>";
+    exit;
+}
+$_SESSION['last_activity'] = time(); // Perbarui waktu aktivitas terakhir
+
+// Logika logout
+if (isset($_GET['logout'])) {
+    session_unset(); // Hapus semua variabel sesi
+    session_destroy(); // Hancurkan sesi
+    $message = "Log out berhasil.";
+    echo "<script type='text/javascript'>alert('$message'); window.location.href = '../login.php';</script>";
+    exit;
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -37,6 +58,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Lelang</title>
     <link rel="stylesheet" href="../asset/style.css">
+    <script>
+        var timeout = 300000; // waktu dalam milidetik (5 menit) 
+        var logoutTimer;
+
+        function resetTimer() {
+            clearTimeout(logoutTimer);
+            logoutTimer = setTimeout(logout, timeout);
+        }
+
+        function logout() {
+            window.location.href = '?logout=true'; // arahkan ke halaman logout 
+        }
+        document.onload = resetTimer;
+        document.onmousemove = resetTimer;
+        document.onkeypress = resetTimer;
+    </script>
 </head>
 
 <body>
