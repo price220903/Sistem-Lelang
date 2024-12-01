@@ -10,6 +10,27 @@ if (!isset($_SESSION['id'])) {
 }
 
 $message = "";
+$timeout = 300; // waktu dalam detik (5 menit)
+
+// Logika timeout
+if (isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity']) > $timeout) {
+    session_unset(); // Hapus semua variabel sesi 
+    session_destroy(); // Hancurkan sesi 
+    $message = "Sesi telah berakhir karena tidak ada aktivitas selama 5 menit.";
+    echo "<script type='text/javascript'>alert('$message'); window.location.href = '../login.php';</script>";
+    exit;
+}
+$_SESSION['last_activity'] = time(); // Perbarui waktu aktivitas terakhir
+
+// Logika logout
+if (isset($_GET['logout'])) {
+    session_unset(); // Hapus semua variabel sesi
+    session_destroy(); // Hancurkan sesi
+    $message = "Log out berhasil.";
+    echo "<script type='text/javascript'>alert('$message'); window.location.href = '../login.php';</script>";
+    exit;
+}
+
 $id_user = $_SESSION['id'];
 
 // Ambil data pengguna

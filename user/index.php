@@ -4,6 +4,10 @@ session_start();
 
 date_default_timezone_set('Asia/Jakarta'); // Atur zona waktu ke WIB
 
+$message = ""; // Variabel untuk menyimpan pesan
+$timeout = 300; // waktu dalam detik (5 menit)
+
+
 if (!isset($_SESSION['id'])) {
     header("Location: ../login.php");
     exit;
