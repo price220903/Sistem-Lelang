@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message = "Daftar berhasil.";
         echo "<script type='text/javascript'>alert('$message'); window.location.href = 'login.php';</script>";
         exit;
-    }else{
+    } else {
         $message = "Daftar gagal, coba lagi.";
         echo "<script type='text/javascript'>alert('$message'); window.location.href = 'register.php';</script>";
     }
@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Lelang</title>
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="icon" href="asset/logo.png" type="image/x-icon">
 </head>
 
 <body>

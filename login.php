@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Lelang</title>
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="icon" href="asset/logo.png" type="image/x-icon">
 </head>
 
 <body>

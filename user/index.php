@@ -45,6 +45,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Lelang</title>
     <link rel="stylesheet" href="../asset/style.css">
+    <link rel="icon" href="../asset/logo.png" type="image/x-icon">
     <script>
         var timeout = 300000; // waktu dalam milidetik (5 menit) 
         var logoutTimer;
